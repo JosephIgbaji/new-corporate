@@ -11,16 +11,21 @@ import { useEffect, useState } from "react";
 
 const Overview = () => {
   const { data } = useGetAllEntityQuery();
-  // console.log("All Entity:", data?.data);
 
   const [entity, setEntity] = useState(null);
+  const [show, setShow] = useState(false);
+
   useEffect(() => {
     setEntity(data);
+    setInterval(() => {
+      setShow(true);
+    }, 5000);
   }, [data?.data]);
 
+  console.log("All Entity:", data?.data);
   return (
     <>
-      {entity?.data ? (
+      {show ? (
         <div className="px-4">
           {/* First Section */}
           <div className="rounded-xl font-poppins mb-4 flex flex-wrap gap-5">
