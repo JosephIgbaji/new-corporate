@@ -3,6 +3,7 @@ export const LOGIN = "user/login";
 export const REGISTER = "user";
 export const GETUSER = "user/me";
 export const GETALLCASE = "case";
+export const GETALLENTITY = "entity";
 export const GETRECENTCASE = "dashboard/recent_cases";
 export const GETMONTHLYCASES = "dashboard/monthly_cases";
 export const GETUPCOMINGTASKS = "case/upcoming_task";

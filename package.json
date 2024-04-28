@@ -30,6 +30,7 @@
     "react-router-dom": "^6.22.0",
     "redux": "^4.2.1",
     "redux-persist": "^6.0.0",
+    "react-shimmer-effects": "^1.0.3",
     "redux-persist-transform-encrypt": "^5.0.1",
     "sweetalert2": "^11.6.13",
     "validate.js": "^0.13.1"
