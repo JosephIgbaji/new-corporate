@@ -1,4 +1,4 @@
-import { scale, case_bud } from "../../assets";
+import { corporate } from "../../assets";
 import { Link } from "react-router-dom";
 import { REGISTER, DASHBOARD } from "../../routes/constants";
 import { useEffect } from "react";
@@ -49,23 +49,21 @@ function Login() {
 
   return (
     <>
-      <section className="h-screen justify-center items-center hidden sm:block md:flex lg:flex">
+      <section className="h-screen justify-center items-center hidden sm:block md:flex">
         <div className="flex flex-col items-center w-full">
           <div className="text-center mb-8">
             <div className="flex flex-col justify-center items-center">
               <div className="md:block lg:flex gap-5 items-center justify-center justify-content-center pb-5">
                 <div className="md:flex md:justify-center">
                   <img
-                    src={case_bud}
-                    alt="case bud Logo"
+                    src={corporate}
+                    alt="corporate filing Logo"
                     className="w-48 h-48"
                   />
                 </div>
                 {/* <h4 className="logo-head">THE NIGERIAN POLICE FORCE</h4> */}
               </div>
-              <p className="text-project-green">
-                Case management for every lawyer
-              </p>
+              <p className="text-4xl font-semibold">Corporate Filing NG</p>
               {/* <img src={scale} alt="Scale" className="mt-4" /> */}
             </div>
           </div>
@@ -92,7 +90,7 @@ function Login() {
 
                       <label
                         htmlFor="email"
-                        className="auth-label absolute text-sm  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-project-green px-1 peer-focus:px-1 peer-focus:text-white peer-focus:dark:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+                        className="auth-label absolute text-sm  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0]  px-1 peer-focus:px-1 peer-focus:text-white peer-focus:dark:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
                       >
                         Email/ID
                       </label>
@@ -117,7 +115,7 @@ function Login() {
 
                       <label
                         htmlFor="password"
-                        className="auth-label absolute text-sm  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-project-green px-1 peer-focus:px-1 peer-focus:text-white peer-focus:dark:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+                        className="auth-label absolute text-sm  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0]  px-1 peer-focus:px-1 peer-focus:text-white peer-focus:dark:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
                       >
                         Password{" "}
                       </label>
@@ -156,10 +154,10 @@ function Login() {
         </div>
       </section>
 
-      <section className="bg-project-dark-green min-h-screen flex flex-col justify-center items-center sm:hidden md:hidden lg:hidden">
+      <section className="bg-project-dark-green min-h-screen flex flex-col justify-center items-center sm:hidden">
         <div className="flex flex-col items-center gap-5 pt-5">
           <img
-            src={case_bud}
+            src={corporate}
             alt="case-bud Logo"
             className="w-24 h-24 bg-white rounded-lg p-1"
           />{" "}

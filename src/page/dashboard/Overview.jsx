@@ -19,7 +19,7 @@ const Overview = () => {
     setEntity(data);
     setInterval(() => {
       setShow(true);
-    }, 5000);
+    }, 7000);
   }, [data?.data]);
 
   console.log("All Entity:", data?.data);
