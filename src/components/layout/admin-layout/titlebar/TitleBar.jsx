@@ -5,12 +5,14 @@ import placeholder from "../../../../assets/titlebar/placeholder-avatar.svg";
 import chevron from "../../../../assets/titlebar/chevron.svg";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 const TitleBar = () => {
   const { user } = useSelector((state) => state.user);
 
   const navigate = useNavigate();
   const { id } = useParams();
+
   // console.log(user);
 
   const { pathname } = useLocation();
@@ -20,11 +22,13 @@ const TitleBar = () => {
     navigate("/dashboard/overview");
   };
 
+  // const style = pathname.includes("overview") ? { display: "hidden" } : {};
+
   const generatePageTitle = () => {
     if (pathname.includes("overview")) {
-      return "Dashboard Overview";
+      return "Applications Overview";
     } else if (pathname.includes(id)) {
-      return "Case summary";
+      return "Application summary";
     } else if (pathname.includes("cases")) {
       return "Cases";
     } else if (pathname.includes("upcoming-task")) {
@@ -44,7 +48,24 @@ const TitleBar = () => {
         className="flex gap-1 flex-nowrap items-center w-fit cursor-pointer"
         onClick={navigateToOverview}
       >
-        <p className="sm:text-xl font-pt-serif uppercase text-project-light-black text-2xl font-bold">
+        <p className="sm:text-xl font-pt-serif uppercase text-project-light-black text-2xl font-bold flex items-center gap-2">
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className={pathname.includes("overview") ? "hidden" : "w-6 h-6"}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+              />
+            </svg>
+          </span>
+
           {generatePageTitle()}
         </p>
       </div>

@@ -4,11 +4,8 @@ import {
   Login,
   Cases,
   Overview,
-  Reports,
   Settings,
-  Help,
-  CaseDetails,
-  UpcomingTasks,
+  ApplicationDetails,
 } from "../page";
 // import { ProtectedRoute } from "../guards";
 import { AdminLayout } from "../layouts";
@@ -34,13 +31,13 @@ const RouterConfig = () => {
         >
           <Route index element={<Navigate to={"/dashboard/overview"} />} />
           <Route path={routes.OVERVIEW} element={<Overview />} />
-          <Route path={routes.UPCOMINGTASKS} element={<UpcomingTasks />} />
+          {/* <Route path={routes.UPCOMINGTASKS} element={<UpcomingTasks />} /> */}
           <Route path={routes.CASES} element={<Cases />} />
-          <Route path={routes.CASEDETAIL} element={<CaseDetails />} />
-          {/* <Route path={routes.REPORTS} element={<Reports />} />
-          <Route path={routes.NOTIFICATIONS} element={<Reports />} /> */}
-          {/* <Route path={routes.SETTINGS} element={<Settings />} />
-          <Route path={routes.HELP} element={<Help />} /> */}
+          <Route
+            path={routes.APPLICATIONDETAIL}
+            element={<ApplicationDetails />}
+          />
+          <Route path={routes.CASEDETAIL} element={<ApplicationDetails />} />
           <Route path={"*"} element={<Navigate to={"/signin"} />} />
         </Route>
       </Routes>

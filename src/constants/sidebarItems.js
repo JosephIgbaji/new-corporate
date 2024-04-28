@@ -13,20 +13,21 @@ const sidebarItems = [
     icon: overview,
   },
   {
-    title: "Cases",
-    route: "dashboard/cases",
-    icon: cases,
+    title: "Settings",
+    route: "dashboard/settings",
+    icon: settings,
   },
+  // {
+  //   title: "Cases",
+  //   route: "dashboard/cases",
+  //   icon: cases,
+  // },
   {
     title: "Logout",
     route: "dashboard/logout",
     icon: logout,
   },
-  // {
-  //   title: "Settings",
-  //   route: "dashboard/settings",
-  //   icon: settings,
-  // },
+
   // {
   //   title: "Help Center",
   //   route: "dashboard/help",

@@ -7,25 +7,25 @@ import trustees from "../../assets/overview/trustees.png";
 import CaseHead from "./../../components/applications/CaseHead";
 import { useGetAllEntityQuery } from "../../service/allEntity.service";
 import { ShimmerCategoryItem } from "react-shimmer-effects";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 const Overview = () => {
-  const { data } = useGetAllEntityQuery();
+  const { data: entity } = useGetAllEntityQuery();
 
-  const [entity, setEntity] = useState(null);
-  const [show, setShow] = useState(false);
+  // const [entity, setEntity] = useState(null);
+  // const [show, setShow] = useState(false);
 
-  useEffect(() => {
-    setEntity(data);
-    setInterval(() => {
-      setShow(true);
-    }, 7000);
-  }, [data?.data]);
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setEntity(data);
+  //     // setShow(true);
+  //   }, 5000);
+  // }, []);
 
-  console.log("All Entity:", data?.data);
+  console.log("All Entity:", entity?.data);
   return (
     <>
-      {show ? (
+      {entity?.data ? (
         <div className="px-4">
           {/* First Section */}
           <div className="rounded-xl font-poppins mb-4 flex flex-wrap gap-5">

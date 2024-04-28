@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import casebud from "../../../../assets/sidebar/casebud.png";
+import casebud from "../../../../assets/sidebar/corporate-filing.png";
 import { useDispatch } from "react-redux";
 import { logoutUser } from "../../../../redux/slices/user.slice";
 // import { useSelector } from "react-redux";
@@ -84,7 +84,7 @@ const Sidebar = ({ sidebarItems }) => {
           <div className="w-full px-2 flex flex-col items-center justify-center font-bold text-base gap-y-1">
             <img src={casebud} className="w-1/3" />
 
-            {/* <p className="text-project-gray w-fit">CaseBud</p> */}
+            <p className="text-project-gray w-fit">Corporate Filing</p>
           </div>
           <div className="w-full flex flex-col gap-y-7 relative mt-12 flex-1 pb-20 hide-scrollbar">
             {sidebarItems.map((sidebarItem, i) => {
