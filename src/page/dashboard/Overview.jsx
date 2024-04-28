@@ -21,6 +21,7 @@ import { ShimmerCategoryItem } from "react-shimmer-effects";
 const Overview = () => {
   const { data: entity } = useGetAllEntityQuery();
   console.log("All Entity:", entity?.data);
+  console.log("DATA FETCHED");
 
   const [currentPage, setCurrentPage] = useState(1);
   const [show, setShow] = useState(false);
@@ -30,8 +31,8 @@ const Overview = () => {
 
   return (
     <>
-      {/* {entity?.data ? ( */}
-      {show ? (
+      {entity?.data ? (
+        // {show ? (
         <div className="px-4">
           {/* First Section */}
           <div className="rounded-xl font-poppins mb-4 flex flex-wrap gap-5">
